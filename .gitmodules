@@ -1,0 +1,4 @@
+[submodule "GodOfJava/VOL_1"]
+	path = GodOfJava/VOL_1
+	url = https://github.com/jbw9964/God_of_java_practice.git
+	branch = post
