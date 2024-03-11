@@ -8,13 +8,19 @@
 아래 그림은 전체 동작이 어떻게 이뤄지는지 간단히 나타낸 그림이다.
 
 <!-- how_java_works.png -->
-![](https://velog.velcdn.com/images/jbw9964/post/f4537d59-38df-4ec5-ace4-6c87fa6ea4d3/image.png)
+
+<p align="center">
+    <img src="https://velog.velcdn.com/images/jbw9964/post/f4537d59-38df-4ec5-ace4-6c87fa6ea4d3/image.png" width=70% height=70%>
+</p>
 
 먼저 `JVM` 에 대한 설명이 필요할 듯 하다.
 `JVM` 은 `Java Virtual Machine` 의 준말로, 하드웨어 플랫폼에 관계없이 `Java Bytecode` 를 실행할 수 있게 해주는 가상머신이다. [`[1]`](#java-virtual-machine---wikipedia) `JVM` 의 간략한 구조는 다음 그림과 같다. [`[2]`](#java-virtual-machine---wikipedia)
 
 <!-- JVM_architecture_overview.png -->
-![](https://velog.velcdn.com/images/jbw9964/post/9cf80afe-2e3a-4847-a5ee-0c454d05a354/image.png)
+
+<p align="center">
+    <img src="https://velog.velcdn.com/images/jbw9964/post/9cf80afe-2e3a-4847-a5ee-0c454d05a354/image.png" width=60% height=60%>
+</p>
 
 
 ---
@@ -22,7 +28,10 @@
 ### 1. Source code to class file
 
 <!-- how_java_works_step_1.png -->
-![](https://velog.velcdn.com/images/jbw9964/post/87cf2263-23bb-4a4d-b466-61d25120c303/image.png)
+
+<p align="center">
+    <img src="https://velog.velcdn.com/images/jbw9964/post/87cf2263-23bb-4a4d-b466-61d25120c303/image.png" width=30% height=30%>
+</p>
 
 
 우리가 작성한 소스코드 `(.java)` 를 실행하기 위해선 먼저 코드를 `class file` `(.class)` 로 변환해야 한다.
@@ -45,8 +54,10 @@ $ java ${SourCode}.java && javap -c ${ClassName}.class
 ### 2. `JVM` - Class file to Bytecode
 
 <!-- how_java_works_step_2.png -->
-![](https://velog.velcdn.com/images/jbw9964/post/c3ceae23-d2cf-428f-8d8a-baf7e6419f1b/image.png)
 
+<p align="center">
+    <img src="https://velog.velcdn.com/images/jbw9964/post/c3ceae23-d2cf-428f-8d8a-baf7e6419f1b/image.png" width=70% height=70%>
+</p>
 
 프로그램을 실행시키기 위해선, 우리가 작성한 코드 `(명령어)` 를 메모리에 올려야 한다. 
 
@@ -60,8 +71,10 @@ $ java ${SourCode}.java && javap -c ${ClassName}.class
 - `JVM memory overview` : [`[2]`](#java-virtual-machine---wikipedia)
 
 <!-- JVM_memory.png -->
-![](https://velog.velcdn.com/images/jbw9964/post/8e1342a5-ad63-4a54-a214-cc7d950db0b3/image.png)
 
+<p align="center">
+    <img src="https://velog.velcdn.com/images/jbw9964/post/8e1342a5-ad63-4a54-a214-cc7d950db0b3/image.png" width=70% height=70%>
+</p>
 
 
 `Runtime Data Area` 에 클래스 파일이 적재되면, `JVM` 은 클래스 파일 내 `Bytecode` 를 `Execution engine` 으로 전달한다.
@@ -71,7 +84,10 @@ $ java ${SourCode}.java && javap -c ${ClassName}.class
 ### 3. Bytecode to machine code
 
 <!-- how_java_works_step_3.png -->
-![](https://velog.velcdn.com/images/jbw9964/post/05a398aa-e7b9-4a9c-b512-455d445d6de9/image.png)
+
+<p align="center">
+    <img src="https://velog.velcdn.com/images/jbw9964/post/05a398aa-e7b9-4a9c-b512-455d445d6de9/image.png" width=50% height=50%>
+</p>
 
 
 `Execution engine` 은 `Bytecode` 를 기계어 `(Machine code)` 로 변환한다. 이 때, `Execution engine` 은 `Interpreter` 를 쓰기도 하고, `Compiler` 를 사용하기도 한다. [`[5]`](#jit-vs-interpreters---stackoverflow)
@@ -98,3 +114,5 @@ $ java ${SourCode}.java && javap -c ${ClassName}.class
 
 - #### [`JIT vs interpreters - stackoverflow`](https://stackoverflow.com/questions/3718024/jit-vs-interpreters)
     - `[5]` : The difference is in how they generate the native code, how optimized it is as well how costly the optimization is. 
+
+---
